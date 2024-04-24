@@ -1,0 +1,264 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfdvsyqso8nv7"]
+
+[ext_resource type="Script" path="res://visualizer.gd" id="1_reian"]
+[ext_resource type="AudioStream" uid="uid://v86yaj7hsale" path="res://dnbtrack.wav" id="2_1m7hx"]
+
+[node name="AudioVisualizer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_reian")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1m7hx")
+autoplay = true
+bus = &"Music"
+
+[node name="CircleBase" type="TextureRect" parent="MusicPlayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7147, 16.2)
+expand_mode = 1
+
+[node name="Right" type="Control" parent="MusicPlayer/CircleBase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.253998
+offset_top = 0.370371
+offset_right = -0.253998
+offset_bottom = 0.370371
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.930349, 0.395062)
+
+[node name="Bottom" type="Control" parent="MusicPlayer/CircleBase/Right"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.0102196
+offset_top = 0.493831
+offset_right = -0.0102196
+offset_bottom = 0.493831
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="ColorRect" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -18.9901
+offset_right = -16.9901
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect2" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -15.9951
+offset_right = -13.9951
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect3" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -13.0001
+offset_right = -11.0001
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect4" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -10.0051
+offset_right = -8.00511
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect5" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -7.01013
+offset_right = -5.01013
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect6" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -3.98031
+offset_right = -1.98031
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect7" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = -0.950505
+offset_right = 1.04949
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect8" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 2.04448
+offset_right = 4.04448
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect9" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 5.03946
+offset_right = 7.03946
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect10" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 7.99962
+offset_right = 9.99962
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect11" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 10.9946
+offset_right = 12.9946
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect12" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 13.9896
+offset_right = 15.9896
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect13" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Bottom"]
+layout_mode = 0
+offset_left = 16.9846
+offset_right = 18.9846
+offset_bottom = 1.0
+pivot_offset = Vector2(1, 0.5)
+
+[node name="Top" type="Control" parent="MusicPlayer/CircleBase/Right"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.0102196
+offset_top = 0.493831
+offset_right = -0.0102196
+offset_bottom = 0.493831
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="ColorRect" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -18.9901
+offset_right = -16.9901
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect2" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -15.9951
+offset_right = -13.9951
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect3" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -13.0001
+offset_right = -11.0001
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect4" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -10.0051
+offset_right = -8.00511
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect5" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -7.01013
+offset_right = -5.01013
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect6" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -3.98031
+offset_right = -1.98031
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect7" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = -0.950505
+offset_right = 1.04949
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect8" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 2.04448
+offset_right = 4.04448
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect9" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 5.03946
+offset_right = 7.03946
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect10" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 7.99962
+offset_right = 9.99962
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect11" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 10.9946
+offset_right = 12.9946
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect12" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 13.9896
+offset_right = 15.9896
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
+
+[node name="ColorRect13" type="ColorRect" parent="MusicPlayer/CircleBase/Right/Top"]
+layout_mode = 0
+offset_left = 16.9846
+offset_right = 18.9846
+offset_bottom = 1.0
+rotation = 3.14159
+pivot_offset = Vector2(1, 0.5)
