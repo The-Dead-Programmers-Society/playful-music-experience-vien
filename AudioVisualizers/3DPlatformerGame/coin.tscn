@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c648scdcesf26"]
 
 [ext_resource type="Script" path="res://Coin.gd" id="1_ieemw"]
-[ext_resource type="ArrayMesh" uid="uid://dew7c1dlp6jqn" path="res://Assets/Models/note4.res" id="2_5it3y"]
-[ext_resource type="AudioStream" uid="uid://tjlqgo4dw6tu" path="res://Assets/MediumExplosion.wav" id="3_xi037"]
+[ext_resource type="ArrayMesh" uid="uid://dew7c1dlp6jqn" path="res://Assets/Music/note4.res" id="2_5it3y"]
+[ext_resource type="AudioStream" uid="uid://tjlqgo4dw6tu" path="res://Assets/Music/MediumExplosion.wav" id="3_xi037"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5cf4r"]
 margin = 0.3

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bve1d241dynae" path="res://steo.tscn" id="1_15gnd"]
 [ext_resource type="PackedScene" uid="uid://cfnrcdvo5kym5" path="res://block.tscn" id="1_ytulr"]
-[ext_resource type="AudioStream" uid="uid://tjlqgo4dw6tu" path="res://Assets/MediumExplosion.wav" id="4_4wmmh"]
+[ext_resource type="AudioStream" uid="uid://tjlqgo4dw6tu" path="res://Assets/Music/MediumExplosion.wav" id="4_4wmmh"]
 [ext_resource type="PackedScene" uid="uid://c648scdcesf26" path="res://coin.tscn" id="5_667oo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip80w"]
