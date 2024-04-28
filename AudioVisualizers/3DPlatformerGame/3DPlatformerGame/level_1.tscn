@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwgvex8pf0idb"]
+
+[ext_resource type="PackedScene" uid="uid://bve1d241dynae" path="res://steo.tscn" id="1_15gnd"]
+[ext_resource type="PackedScene" uid="uid://cfnrcdvo5kym5" path="res://block.tscn" id="1_ytulr"]
+[ext_resource type="AudioStream" uid="uid://tjlqgo4dw6tu" path="res://Assets/Music/MediumExplosion.wav" id="4_4wmmh"]
+[ext_resource type="PackedScene" uid="uid://c648scdcesf26" path="res://coin.tscn" id="5_667oo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip80w"]
+albedo_color = Color(0.34902, 0.164706, 0.945098, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_86jap"]
+material = SubResource("StandardMaterial3D_ip80w")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6a8g"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c2pe7"]
+sky_top_color = Color(0.27451, 0, 0.0196078, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0.243137, 0.121569, 0.168627, 1)
+ground_horizon_color = Color(0.282353, 0.133333, 0.0392157, 1)
+sun_angle_max = 6.78
+sun_curve = 68.1364
+
+[sub_resource type="Sky" id="Sky_xsv20"]
+sky_material = SubResource("ProceduralSkyMaterial_c2pe7")
+
+[sub_resource type="Environment" id="Environment_442g3"]
+background_mode = 2
+sky = SubResource("Sky_xsv20")
+ambient_light_color = Color(0.427451, 0.254902, 0.305882, 1)
+ambient_light_sky_contribution = 0.64
+fog_light_color = Color(0.184314, 0.298039, 0.203922, 1)
+fog_light_energy = 0.41
+fog_density = 0.001
+fog_sky_affect = 0.607
+fog_height = -652.33
+fog_height_density = 16.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0296
+volumetric_fog_albedo = Color(0, 0.713726, 0.909804, 1)
+volumetric_fog_emission = Color(0, 0.819608, 0.470588, 1)
+volumetric_fog_sky_affect = 0.4
+
+[node name="Level1" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082873, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.340869, 0)
+mesh = SubResource("BoxMesh_86jap")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.334334, 0)
+shape = SubResource("BoxShape3D_p6a8g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.88751, 0.460789, 0, -0.460789, -0.88751, 0, 3.3451, -2.28963)
+shadow_enabled = true
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_ytulr")]
+transform = Transform3D(1, 0, 0, 0, 0.454861, -0.890562, 0, 0.890562, 0.454861, 2.5565, 1.79295, -3.59752)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_ytulr")]
+transform = Transform3D(1, 0, 0, 0, 0.740535, -0.672018, 0, 0.672018, 0.740535, 0.0221632, 3.5611, -0.0185476)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_ytulr")]
+transform = Transform3D(1, 0, 0, 0, 0.454861, -0.890562, 0, 0.890562, 0.454861, 1.62982, 4.00693, 0.610257)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_ytulr")]
+transform = Transform3D(1, 0, 0, 0, 0.740535, -0.672018, 0, 0.672018, 0.740535, -2.91084, 3.34073, -0.42127)
+
+[node name="Steo" parent="." instance=ExtResource("1_15gnd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07933, 0.636645, 1.63294)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_442g3")
+
+[node name="Coin" parent="." instance=ExtResource("5_667oo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.459315, 2.19182)
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4wmmh")
